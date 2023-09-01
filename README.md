@@ -1,1 +1,1 @@
-# Javascript
+# Hii! There i'm learning -> Javascript 

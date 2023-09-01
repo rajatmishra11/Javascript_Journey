@@ -1,5 +1,12 @@
 /*
-
+JS values
+       1. Fixed  value   ->Literals
+                    Numbers are written with or without decimals:
+                    Strings are text, written within double or single quotes         
+       2. Variable value ->Variables
+                    variables are used to store data values.
+                    JavaScript uses the keywords var, let and const to declare variables.
+____________________________________________________________________________
 Variables are containers for storing values.
 ___________________________________________________________
 JavaScript Variables can be declared in 4 ways:
@@ -53,4 +60,5 @@ JavaScript Identifiers
         Reserved words (like JavaScript keywords) cannot be used as names.
         --------------------------------------------------------------------------
     5.JavaScript identifiers are case-sensitive.
-*
+_______________________________________________________________________________
+*/
