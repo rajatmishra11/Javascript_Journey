@@ -1,3 +1,12 @@
+<h1>JavaScript</h1>
+___________________________________________________________
+### What is JS-
+1.  Lightweight, interpreted compiled scripting language.
+2.  used in front-end , back-end application using frameworks.
+__________________________________________________________
+### What is ECMA Script( ES5 and ES7)
+-  scripting lang, creates standard for creating a scripting language
+
 ___________________________________________________________________
 ### Why JS->
 1. can change HTML content
@@ -6,10 +15,9 @@ ___________________________________________________________________
 4.  can change html styles
 5.  can hide html elements
 6.  show html elements
-    -----------------------------------------------------    
+___________________________________________________    
 ### How to use JS code-
 -   inserted b/w <script> .... </script> tags
-    -----------------------------------------------------
     1. JS code in head:
     ```
     <head>
@@ -69,29 +77,28 @@ ________________________________________________________________________________
 - Comments are ignored, and will not be executed      
 _________________________________________________________
 ### JavaScript has 8 Datatypes
-*** Primitive datatype***
-1. String
-2. Number
-3. BigInt
-4. Boolean
-5. Undefined
-6. Null - (standalone value)
-7. Symbol - (unique)
-8. Object
+-   Primitive datatype
+    1. String
+    2. Number
+    3. BigInt
+    4. Boolean
+    5. Undefined
+    6. Null - (standalone value)
+    7. Symbol - (unique)
+    8. Object
 
-*** Object-Datatype***
-The object data type can contain:
-1. An object
-2. An array
-3. A date
+-   Object-Datatype
+    1. An object
+    2. An array
+    3. A date
 ___________________________________________________________
 ### JS values
 1. Fixed  value   ->Literals
-            Numbers are written with or without decimals:
-            Strings are text, written within double or single quotes         
+    -  Numbers are written with or without decimals:
+    - Strings are text, written within double or single quotes         
 2. Variable value ->Variables
-            variables are used to store data values.
-            JavaScript uses the keywords var, let and const to declare variables.
+    - variables are used to store data values.
+    - JavaScript uses the keywords var, let and const to declare variables.
 ____________________________________________________________________________
 ### Variables are containers for storing values.
 ___________________________________________________________
@@ -245,3 +252,70 @@ Array Methods-
     Array slice()
 ```
 ____________________________________________________________
+
+### Hoisting in JS- (only for var)
+- Hoisting in JS default behaviour of moving declarations to the top of the file.
+-   Declaration can be both variable and function
+-   Moved the declaration not initialization at top
+-   Wwork for proper as a function, not on function expression, arrow function.
+___________________________________________________________
+### Scope Chain and Lexical Environment/ Scope in JS-
+- determines the accecibility of variables and functions:
+1.  Lexical Scope- 
+    -   the scope of the variable or function is determined by where it is defined in the source code.
+    -   The scope remains the same throughout the execution of program.
+    - Types
+        -   Golobal-
+            -   variables defined any functions or blocks can
+            be accessed from anywhere within the program
+
+        -   Local Scope
+            - variables defined within the function/block can only  accessed with in that scope.
+            -   Local scope includes both block and function scope.
+
+        -   Nested Scope
+            -   function defined within the function can access variables from outer function.
+
+2.  Scope Chain:
+- This is the hierarchy of scopes that will be searched in order to find a function or variable34. The search is conducted in a lexical manner, starting from the current scope of the current function. If the variable or function is not found in the current scope, the engine looks in the parent function, and finally in the global scope.
+___________________________________________________________
+### Closure in JS:  Feature of JS
+1.  A closure is the combination of a function bundled toghether(enclosed) with references to its surrounding state (the lexical environment).
+2.  In other words, a closure gives you access to an outer function's scope from inner Function.
+___________________________________________________________
+### this keyword in js-
+1. In Js , this keyword always refers to an object.
+2. The thing about it that the object it refers to will vary depending on how and where "this" is being called.
+3. Different ways to use this keyword
+    -   By itself
+    -   inside object method.
+    -   inside function
+________________________________________________________
+### Event Loop & Call Stack in JS
+- An event loop is a part of JavaScript runtime environment which allows web applications to handle asynchronous tasks
+
+
+
+
+
+
+
+
+
+
+
+___________________________________________________________
+### Call, Apply and Bind in JavaScript:
+1.  Call is a function that helps you to change the context of the invoking function.
+2.  i.e , it helps you to replace the value of ``` this ``` inside the function with whatever value you want .
+_____________________________________________________________
+
+### call():
+- The call() method invokes a function with a given this value and arguments provided individually1. ```func.call(thisArg, arg1, arg2, ...)```.
+### apply():
+- similar to call(), but it takes an array-like object of arguments1. ```func.apply(thisArg, [argsArray])```
+### bind():
+- The bind() method creates a new function that, when called, has its this keyword set to the provided value,
+     with a given sequence of arguments preceding any provided when the new function is called2. ```func.bind(thisArg[, arg1[, arg2[, ...]]])```
+***Note*** 
+- thisArg is the object to be used as this inside func. arg1, arg2, ... are arguments to prepend to arguments provided to the newly-bound function.
