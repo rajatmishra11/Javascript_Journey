@@ -320,3 +320,21 @@ _____________________________________________________________
      with a given sequence of arguments preceding any provided when the new function is called2. ```func.bind(thisArg[, arg1[, arg2[, ...]]])```
 ***Note*** 
 - thisArg is the object to be used as this inside func. arg1, arg2, ... are arguments to prepend to arguments provided to the newly-bound function.
+__________________________________________________________
+### Map, Reduce & Filter
+- **```Map()```** :
+   - The Map() method is used for creating a new array from an existing one, applying a function to each one of the elements of the first array.
+   - ``` var new_array= arr.map(function callback(element, index, array))```
+- **```Filter()```** :
+    - The filter() method takes each element in an array and it applies a conditional statement against it.
+    - If this conditional returns true, the element gets pushed to the output array. 
+    - If the condition returns false, the element does not get pushed to the output array.
+   - ```var new_array = arr.filter(callback)```
+- **```Reduce()```** :
+    - The reduce() method reduces an array of values down to just one value. To get the output value,
+    - it runs a reducer function on each element of the array.
+   - ```var total = arr.reduce(callback[ accumulator, initialValue])```
+
+***Note***
+- In reduce callback function first parameter will be accumulator (total), second parameter will be current element
+- The reduce() method reduces the values of an array to a single value by repeatedly applying a function along with an accumulator.
