@@ -25,8 +25,6 @@ function bakePizza(dough) {
   });
 }
 
-
-
 async function orderPizza() {
   const cheese = await getCheese();
   const dough = await makeDough(cheese);

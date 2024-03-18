@@ -391,6 +391,9 @@ _______________________________________________
 -   setTimeOut is an async function, meaning that the timer function will not pause the execution of other functions in the function stack.
 - ``` setTimeOut(function, milliseconds) ```
 _______________________________________________
+###
+
+
 ### CallBack Hell-
 - also known as Pyramid of Doom
 -   is a situation in js where multiple nested callback function make the code difficult to read and maintain.
@@ -411,3 +414,12 @@ let promise = new Promise( function(resolve, reject ){
         - **pending**: intially when the executer function starts the exexution.
         - **fullfilled** : when object is resolved.
         - **rejected** : when the promise is rejected
+________________________________________________
+### Async / Await in JavaScript
+- these are special keywords that are used to work with promises in more comfortable fashion.
+-   The ```async``` keyword can be placed before a function, which means the function will always return a promise.
+-   If the function returns a value that is not a promise , it will be automatically wrapped in  a resolved promise.
+- the```await``` keyword can be used inside an ```async``` function.
+-   It makes the function wait untill the promise settles and retunrs its result.
+- ``` await``` used with ```async``` .
+________________________________________________
