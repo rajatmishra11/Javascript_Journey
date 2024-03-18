@@ -338,3 +338,79 @@ __________________________________________________________
 ***Note***
 - In reduce callback function first parameter will be accumulator (total), second parameter will be current element
 - The reduce() method reduces the values of an array to a single value by repeatedly applying a function along with an accumulator.
+_________________________________________________________________
+ <h1>Async JS </h1>
+
+____________________________________________
+### Sync in JS?
+- Sync means the code runs in a particular manner of instructions given in the program.
+- Each instruction wait for privious instructions to complete its execution.
+______________________________________________
+### What is Async JS?
+-   is a programming approach that allows the non-blocking execution of tasks, enabling concurrent operations and efficient handling of time-consuming operations.
+- JS is single threded language , which means it can only ```execute one task at a time```
+- certain cases like when fetching data from backend/ api can take a long time to complete.
+-   if JS wait for these task to finish, it would ```block rest of code ``from executing. this leads to async JS to comes in picture  
+-  Async JS Concepts:
+    - Callbacks
+    - Promises
+    - Async/Await
+______________________________________________
+
+``` async await >> promise chain >> callback hell ```
+_______________________________________________
+### Callbacks in JS-
+- A callback is a function that is passed as an argument to another function.
+-   it is executed after the main function has completed its task.
+``` 
+mainFn( callbackFn ) 
+    Eg.
+    setTimeout( callbackFn, 4000)
+
+```
+- Problem with Callbacks:
+    1. Hard to manage multiple nested callbacks (Callback Hell).
+    2. Difficult to handle errors and maintain readability.
+    3. Not easy to track what's happening in your application flow.
+
+```
+Array Callback Functions-
+find()                      return first value of array element that passes a test
+findindex()                 return ist index of an array element that passes a test
+forEach()                   calls a fun for each element
+map()                       creates a new array with result of coding a function for every array element.
+filter()                    returns a new array with all elements that pass a test.
+every()                     check whether all the elements pass a test
+some()                      check whether at least one element passes a test
+reduce()                    apply a function against an accumulator and each element 
+                            in the array (from left to right) to reduce it to a single
+```
+_______________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+_______________________________________________
+### Promises In JS-
+- A Promise is a special type of JS Object. It produces a value after any an asynchronous
+ operation completes successfully, or an error if doesn't complete successfully due to time out, network error, and so on.
+- 
+```
+let promise = new Promise( function(resolve, reject ){
+    //Make an async call and either resolve or reject 
+})
+```
+- Promise object has following internal Properties:
+    - ```state```:
+        - **pending**: intially when the executer function starts the exexution.
+        - **fullfilled** : when object is resolved.
+        - **rejected** : when the promise is rejected
