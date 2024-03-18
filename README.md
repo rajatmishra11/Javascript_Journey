@@ -391,8 +391,30 @@ _______________________________________________
 -   setTimeOut is an async function, meaning that the timer function will not pause the execution of other functions in the function stack.
 - ``` setTimeOut(function, milliseconds) ```
 _______________________________________________
-###
-
+### Program Execution in JS-
+- ``` Call Stack```
+    - It’s where JavaScript keeps track of every function call it ever made.
+    - Whenever a script calls a function, that function execution context gets pushed onto the stack.
+    - If the function calls another function, then that function also gets added to the top of the stack.
+    - The stack empties out when there are no more functions to execute.
+    - LIFO based.
+- ``` CallBack Queue ```
+    - The callBackQueue function is used by JavaScript runtime to keep track of asynchronous tasks.
+    - This queue holds functions that need to be called once some async operation completes.
+    - FIFO based.
+- ``` Web API's```
+    - The Web API's function asynchronously perform operations like reading/writing files or making network requests.
+    - They provide interfaces to access low level resources like file system or network sockets.
+    - These APIs make use of the call back queue to schedule their operations.
+_______________________________________________
+### Event Loop-
+-   Event Loop is fundamental mechanishm that enables nthe async execution of code.
+-   It is essential part of JS runtime environment , allowing the language to handle non-blocknig code operations.
+-   flow of code-
+    ``` callstack -> webApi ->  callBackQueue -> eventLoop -> callStack ```
+-   the ```eventLoop`` continously checks the call stack and callback queue.
+- if the call stack is ```empty``` but there are items in the callback queue, javascript will take the next item from the callback queue and push to callStack for execution.
+_______________________________________________
 
 ### CallBack Hell-
 - also known as Pyramid of Doom
