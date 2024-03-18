@@ -386,20 +386,17 @@ reduce()                    apply a function against an accumulator and each ele
                             in the array (from left to right) to reduce it to a single
 ```
 _______________________________________________
-
-
-
-
-
-
-
-
-
-
-
-
-
+### setTimeOut Function
+-   the setTimeOut() method calls a function after a number of milliseconds.
+-   setTimeOut is an async function, meaning that the timer function will not pause the execution of other functions in the function stack.
+- ``` setTimeOut(function, milliseconds) ```
 _______________________________________________
+### CallBack Hell-
+- also known as Pyramid of Doom
+-   is a situation in js where multiple nested callback function make the code difficult to read and maintain.
+- It occurs when you have many nested callback functions which make the code look like a pyramid or a series of nested blocks. This can lead or simply "callback hell"
+- eg. in API requests or handling file I/O.
+____________________________________________
 ### Promises In JS-
 - A Promise is a special type of JS Object. It produces a value after any an asynchronous
  operation completes successfully, or an error if doesn't complete successfully due to time out, network error, and so on.
