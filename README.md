@@ -648,7 +648,7 @@ let promise = new Promise( function(resolve, reject ){
 
 ---
 
-### The HTML DOM-
+<h1>The HTML DOM- </h1>
 
 - when a web page is loaded, the browser creates a Document Object Model of the page.
 - The HTML DOM is constructed as a tree of object.
@@ -684,3 +684,116 @@ let promise = new Promise( function(resolve, reject ){
    - Adding a class to element : `element.classList.add('newClass')`
    - Removing a class from an element : `element.classList.remove('oldClass')`
    - Checking if an element has a specific class : `element.classList.contains('className')`
+
+---
+
+### Creating And Appending HTML
+
+- We can create a new element using the createElement() method of the document.
+- We can append new Element(node) inside any other element
+
+```
+const para= document.createElement("p)
+const element= document.getElementById("div1)
+element.appendChild(para);
+```
+
+---
+
+### DOM Events-
+
+Events allows you to write JS Code that reacts to certain situations. Ex-
+
+- When user clicks on button
+- When form is submitted
+- When mouse hovers over an image
+
+There are different types of events like-
+
+1. UI Events (mouse click , key press etc.)
+2. Event Flow (Bubbling and Capturing)
+3. Form related events (submit, reset)
+4. Mouse Events (click, dblclick ...)
+5. Keyboard Events (keydown, keypress, keyup)
+6. Window and Document related events (scroll, resize)
+7. Drag and Drop Events
+8. ClipBoard Events
+9. Touch Events
+
+---
+
+#### Event Listeners and Events Handlers
+
+- are mechanisms used to respond to user interactions or other events that occur in a web page.
+
+- Event Handler:
+
+  - An event handler is a property of a DOM element that specifies the code to execute when a particular event occurs on that element.
+  - Event handlers are often defined directly within HTML tags using attributes such as onclick, onmouseover, onkeydown, etc.
+    `<button onclick="myFunction()">Click me</button>`
+  - In this example, myFunction() is the event handler that will be executed when the button is clicked.
+
+- Event Listener:
+  - An event listener is a method that attaches an event handler function to a specified element, typically using JavaScript.
+  - Event listeners provide more flexibility than inline event handlers as they allow multiple event handlers to be attached to the same event on a single element, and they also facilitate better separation of HTML and JavaScript code.
+    `document.getElementById("myButton").addEventListener("click", myFunction);`
+    In this example, myFunction is the event handler function that will be executed when the button with the id "myButton" is clicked.
+
+---
+
+### Event Propogation in JS
+
+- Event propagation in JavaScript refers to the process of how events are transmitted or "propagated" through the DOM (Document Object Model) hierarchy.
+- Types:
+
+  - Event Capturing:
+
+    - During the capturing phase, events propagate from the outermost ancestor down to the target element.
+    - In event capturing, the event starts from the root of the DOM tree and travels through the ancestors down to the target element.
+    - Event listeners attached in the capturing phase are called before the event reaches the target element.
+
+  - Event Bubbling:
+
+    - During the bubbling phase, events propagate from the target element up to the outermost ancestor.
+    - In event bubbling, the event starts from the target element and travels through its ancestors up to the root of the DOM tree.
+    - Event listeners attached in the bubbling phase are called after the event reaches the target element.
+
+---
+
+### Module v/s Package v/s library v/s framework in JS
+
+1.  Module:
+    A module is a single file containing lines of JavaScript code1. It’s the smallest piece of software, a set of methods or functions ready to be used somewhere else.
+
+2.  Package:
+    A package is a collection of modules23. It gathers a number of modules holding the same functional purpose, making it easier to include all the related modules at once.
+
+3.  Library:
+    A library is a collection of packages23. It offers a set of functionalities ready to use without worrying about the subsequent packages3. So, a library is what you include when you want to add some functionality to your code.
+
+4.  Framework:
+    A framework is a set of libraries3. But unlike a library, a framework also provides an architecture for the development work3. In other words, you don’t include a framework, you integrate your code into it3. It’s the wireframe of the project3. That’s why a framework forces its coding style on you3.
+
+`module -> package -> library -> framework`
+
+---
+
+### Error Handling in JS
+
+There are two types of errors in JavaScript:
+
+1.  Syntax Errors:
+    These occur when the JavaScript engine encounters code that violates the language syntax rules. These errors prevent the script from executing at all.
+
+2.  Runtime Errors:
+    These occur during the execution of the script. They typically happen when the script tries to perform an operation that is not allowed, such as accessing a property of an undefined variable, calling a method on an object that doesn't exist, or dividing by zero.
+
+```
+try {
+    // Code that might throw an error
+} catch (error) {
+    // Code to handle the error
+} finally {
+    // Code that always executes, regardless of whether an error occurred
+}
+```
