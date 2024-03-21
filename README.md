@@ -648,6 +648,55 @@ let promise = new Promise( function(resolve, reject ){
 
 ---
 
+<h1>Browser Object Model- JS Window Object </h1>
+
+---
+
+- BOM allows JS to interact with browser.
+
+- The `window` object is a property of the global object (`globalThis`) and represents the window or tab in which the script is running.
+
+```
+location:             Represents the current URL of the browser window.
+history:              Provides the browsing history of the current window session.
+innerHeight:          Returns the height of the window's content area.
+innerWidth:           Returns the width of the window's content area.
+open():               Opens a new browser window or a new tab, depending on browser settings.
+close():              Closes the current browser window.
+resizeBy():           Resizes the current window by a specified amount.
+resizeTo():           Resizes the current window to a specified width and height.
+moveTo():             Moves the current window to a specified position on the screen.
+moveBy():             Moves the current window by a specified amount relative to its current position.
+scrollBy():           Scrolls the document by a specified number of pixels.
+scroll():             Scrolls the document to a specified position.
+scrollTo():           Scrolls the document to a specified position.
+print():              Opens the print dialog to print the current document.
+document:             Represents the HTML document loaded in the current window and provides
+                      methods and properties to access and manipulate its content.
+```
+
+---
+
+### Definition of document:
+
+The document object represents the HTML document loaded in the current window. It serves as an entry point to the web page's content, allowing manipulation and interaction with elements such as accessing and modifying the DOM (Document Object Model), handling events, and altering the appearance and structure of the page.
+
+The document object provides various properties and methods, including:
+
+```
+document.getElementById():      Retrieves an element from the document by its ID.
+document.createElement():       Creates a new HTML element.
+document.querySelector():       Retrieves the first element that matches a specified CSS selector.
+document.querySelectorAll():    Retrieves a list of all elements that match a specified CSS selector.
+document.addEventListener():    Attaches an event handler to the document.
+document.title:                 Gets or sets the title of the document.
+document.body:                  Gets the <body> element of the document.
+document.head:                  Gets the <head> element of the document.
+document.cookie:                Gets or sets the cookies associated with the document.
+```
+
+---
+
 <h1>The HTML DOM- </h1>
 
 - when a web page is loaded, the browser creates a Document Object Model of the page.
