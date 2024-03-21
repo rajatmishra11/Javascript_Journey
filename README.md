@@ -809,6 +809,16 @@ There are different types of events like-
 
 ---
 
+### Element v/s Node in DOM
+
+- Every part of document (including text, comments, HTML tags, etc) is a `node`.
+
+- An HTML element represents an object in the document's structure. It has properties and methods associated with it.
+
+- Every Element is a node, but not every node is an element.
+
+---
+
 ### Module v/s Package v/s library v/s framework in JS
 
 1.  Module:
@@ -846,3 +856,21 @@ try {
     // Code that always executes, regardless of whether an error occurred
 }
 ```
+
+---
+
+### WEB API's
+
+- #### fetch API
+
+  - The fetch API provides an interface for fetching(sending/receiving) resources.
+  - It uses Request and Response objects.
+  - The fetch() method is used to fetch a resource(data)
+    `let promise= fetch(url, [options])`
+    - options- are (GET, POST, PUT, DELETE)
+  - GET is default method.
+
+- #### Terms
+  - AJAX is async JS & XML.
+  - JSON is Javascript object Notation
+  - `.json()` method returns a second promise that resolves with the result of parsing the response body text as JSON. (Input is JSON , output is is JS object)
