@@ -317,6 +317,96 @@ Array Methods-
 
 ---
 
+### Objects :JavaScript Object Manipulation
+
+JavaScript is built on an object-based paradigm, allowing objects to be created and manipulated using various methods. Here are key points covered in the article:
+
+1. **Object Declaration:**
+
+   - **Empty Object:**
+     ```javascript
+     let user = new Object(); // "object constructor" syntax
+     let user = {}; // "object literal" syntax
+     ```
+
+2. **Object with Constructor:**
+
+   - Define an object type with a constructor function and create instances with `new`:
+     ```javascript
+     function User(name, age, mobile) {
+       this.name = name;
+       this.age = age;
+       this.mobile = mobile;
+     }
+     var user1 = new User("Talha", 26, 8801967402131);
+     ```
+
+3. **Accessing Object Properties:**
+
+   - **Bracket Notation:** `object[key]`
+   - **Dot Notation:** `object.key`
+     ```javascript
+     console.log(user["marks"]["math"]); //20
+     console.log(user.marks.math); //20
+     ```
+
+4. **Object Methods:**
+
+   - **Object.values():** Returns an array of the object's values.
+     ```javascript
+     const values = Object.values(user1); // [26, 8801967402131, "Talha"]
+     ```
+   - **Object.keys():** Returns an array of the object's keys.
+     ```javascript
+     const keys = Object.keys(user1); // ["age", "mobile", "name"]
+     ```
+   - **Object.entries():** Returns an array of key/value pairs.
+     ```javascript
+     const entries = Object.entries(user1); // [["age", 26], ["mobile", 8801967402131], ["name", "Talha"]]
+     ```
+
+5. **Merging Objects:**
+
+   - **Spread Operator:**
+     ```javascript
+     const newObj = { ...user1, location: "sylhet" };
+     ```
+   - **Object.assign():**
+     ```javascript
+     const combineObj = Object.assign(user1, user1NewVal);
+     ```
+
+6. **Object Immutability:**
+
+   - **Object.freeze():** Prevents modifications and additions.
+     ```javascript
+     Object.freeze(user1);
+     ```
+   - **Object.isFrozen():** Checks if an object is frozen.
+     ```javascript
+     console.log(Object.isFrozen(user1)); // true
+     ```
+
+7. **Object Sealing:**
+
+   - **Object.seal():** Prevents adding new properties but allows modification of existing ones.
+     ```javascript
+     Object.seal(user1);
+     ```
+   - **Object.isSealed():** Checks if an object is sealed.
+     ```javascript
+     console.log(Object.isSealed(user1)); // true
+     ```
+
+8. **Localization:**
+   - **Object.toLocaleString():** Returns a locale-specific string representation of the object.
+     ```javascript
+     const date1 = new Date(Date.UTC(2018, 11, 20, 3, 0, 0));
+     console.log(date1.toLocaleString("bn")); // "৫/১২/২০১৮ ৯:০০:০০ AM"
+     ```
+
+---
+
 ### Function in JS
 
 - What is functions?
